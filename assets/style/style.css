@@ -1,0 +1,50 @@
+.scheme {
+	height: 393px;
+	width: 738px;
+	margin: 0 auto;
+	position: relative;
+    transform: skew(-20deg, -10deg);
+    
+}
+.scheme svg {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	max-height: 95vh;
+	width: 738px;
+    
+}
+.scheme rect {
+	fill: #a4f1ff;
+	cursor: pointer;
+}
+
+.scheme-item {
+	position: absolute;
+	cursor: pointer;
+}
+.scheme-name {
+	font-weight: bold;
+	font-size: 10px;
+	text-align: center;
+	line-height: 13px;
+}
+.scheme-popup {
+	display: none;
+	border: 1px solid #777;
+	padding: 10px;
+	width: 200px;
+	position: absolute;
+	font-size: 12px;
+	line-height: 14px;
+	background: #fff;
+	z-index: 9999;
+	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	text-align: left;
+}
+.scheme rect:hover, #hover {
+	fill: #ffc70b;
+}
+.scheme rect.active {
+	fill: #FF8C0B !important;
+}
