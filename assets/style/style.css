@@ -2,9 +2,7 @@
 	height: 393px;
 	width: 738px;
 	margin: 0 auto;
-	position: relative;
-    transform: skew(-20deg, -10deg);
-    
+	position: relative;    
 }
 .scheme svg {
 	position: absolute;
@@ -12,7 +10,6 @@
 	left: 0px;
 	max-height: 95vh;
 	width: 738px;
-    
 }
 .scheme rect {
 	fill: #a4f1ff;
