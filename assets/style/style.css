@@ -40,7 +40,7 @@
 	text-align: left;
 }
 .scheme rect:hover, #hover {
-	fill: #ffc70b;
+	fill: #ffc70b !important;
 }
 .scheme rect.active {
 	fill: #FF8C0B !important;
