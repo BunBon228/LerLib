@@ -1,19 +1,135 @@
-.scheme {
-	height: 393px;
-	width: 738px;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+*{
+	/* border: 1px solid greenyellow; */
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+
+html, body{
 	margin: 0 auto;
-	position: relative;    
+	width: 100%;
+	min-height: 100vh;
+	overflow: hidden;
+}
+
+.back{
+	display: flex;
+	text-decoration: none;
+	padding: 15px 20px;
+	border-radius: 10px;
+	background: linear-gradient(45deg, blue, rgb(0, 132, 255));
+	color: #fff;
+	width: fit-content;
+	position: absolute;
+	bottom: 15px;
+	right: 15px;
+	z-index: 99;
+
+	&:active{
+		box-shadow: #000 inset 1px 1px 10px -1px;
+	}
+
+}
+
+.wrapper{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	position: relative;
+	height: 100vh;
+	width: 100%;
+}
+
+.header{
+	padding-top: 50px;
+
+	&>img{
+		margin: 0 30px;
+	}
+
+}
+
+.navigation{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+}
+
+.btn{
+	text-decoration: none;
+	color: #fff;
+	background: linear-gradient(45deg, blue, rgb(0, 132, 255));
+	max-width: 400px;
+	padding: 30px 15px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	border-radius: 15px;
+	font-size: 20px;
+	margin: 20px 0;
+
+	&:active{
+		box-shadow: #000 inset 1px 1px 10px -1px;
+	}
+
+}
+
+.qr{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+	&>img{
+		margin-top: 100px;
+		width: 40%;
+	}
+
+}
+
+.scheme {
+	height: 50vh;
+	width: 100vw;
+	position: relative;
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
 .scheme svg {
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	max-height: 95vh;
-	width: 738px;
+	/* animation: redf 2s; */
+	max-height: 80%;
+	width: auto;
+
 }
-.scheme rect {
-	fill: #a4f1ff;
+
+@keyframes redf{
+	0%{
+		transform: rotate(360deg);
+	}
+	100%{
+		transform: rotate(0deg);
+	}
+}
+
+@keyframes op{
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.scheme .object {
+	/* fill: #a4f1ff; */
 	cursor: pointer;
+	transition: 0.4s;
 }
 
 .scheme-item {
@@ -22,7 +138,7 @@
 }
 .scheme-name {
 	font-weight: bold;
-	font-size: 10px;
+	font-size: 8px;
 	text-align: center;
 	line-height: 13px;
 }
@@ -39,9 +155,9 @@
 	box-shadow: 0 0 10px rgba(0,0,0,0.5);
 	text-align: left;
 }
-.scheme rect:hover, #hover {
+.scheme .object:hover, #hover {
 	fill: #ffc70b !important;
 }
-.scheme rect.active {
+.scheme .object.active {
 	fill: #FF8C0B !important;
 }
