@@ -15,21 +15,60 @@ html, body{
 	overflow: hidden;
 }
 
+.mtc__part{
+	position: absolute;
+	bottom: 50px;
+	left: 50px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	&>img{
+		width: 50px;
+		height: 50px;
+		margin-right: 20px;
+	}
+
+}
+
 .back{
 	display: flex;
 	text-decoration: none;
 	padding: 15px 20px;
 	border-radius: 10px;
-	background: linear-gradient(45deg, blue, rgb(0, 132, 255));
+	background: linear-gradient(45deg, #060AB2, #060AB2);
 	color: #fff;
 	width: fit-content;
 	position: absolute;
-	bottom: 15px;
+	top: 15px;
 	right: 15px;
 	z-index: 99;
 
 	&:active{
 		box-shadow: #000 inset 1px 1px 10px -1px;
+	}
+
+}
+
+.back_img{
+	position: absolute;
+	width: 900px;
+	height: 900px;
+	background-color: transparent !important;
+
+	&>svg{
+		width: inherit;
+		height: inherit;
+	}
+
+	&.back__bottom{
+		bottom: 0;
+		right: 0;
+	}
+
+	&.back__top{
+		top: 0;
+		left: 0;
 	}
 
 }
@@ -47,7 +86,7 @@ html, body{
 	padding-top: 50px;
 
 	&>img{
-		margin: 0 30px;
+		margin: 0 50px;
 	}
 
 }
@@ -61,15 +100,15 @@ html, body{
 .btn{
 	text-decoration: none;
 	color: #fff;
-	background: linear-gradient(45deg, blue, rgb(0, 132, 255));
-	max-width: 400px;
-	padding: 30px 15px;
+	background: linear-gradient(45deg, #060AB2, #060AB2);
+	max-width: 600px;
+	padding: 35px 25px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	border-radius: 15px;
 	font-size: 20px;
-	margin: 20px 0;
+	margin: 50px 0;
 
 	&:active{
 		box-shadow: #000 inset 1px 1px 10px -1px;
@@ -94,6 +133,7 @@ html, body{
 }
 
 .scheme {
+	animation: op 5s;
 	height: 50vh;
 	width: 100vw;
 	position: relative;
@@ -106,15 +146,6 @@ html, body{
 	max-height: 80%;
 	width: auto;
 
-}
-
-@keyframes redf{
-	0%{
-		transform: rotate(360deg);
-	}
-	100%{
-		transform: rotate(0deg);
-	}
 }
 
 @keyframes op{
@@ -133,8 +164,18 @@ html, body{
 }
 
 .scheme-item {
+	animation: op 4s;
 	position: absolute;
 	cursor: pointer;
+}
+
+.hall {
+	font-weight: bold;
+	font-size: 8px;
+	text-align: center;
+	line-height: 13px;
+	background: #fff;
+	padding: 5px 5px;
 }
 .scheme-name {
 	font-weight: bold;
@@ -152,7 +193,7 @@ html, body{
 	line-height: 14px;
 	background: #fff;
 	z-index: 9999;
-	box-shadow: 0 0 10px rgba(0,0,0,0.5);
+	box-shadow: 0 0 10px #444444;
 	text-align: left;
 }
 .scheme .object:hover, #hover {

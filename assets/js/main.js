@@ -1,6 +1,6 @@
 // console.log(123);
 
-setTimeout("window.location.href = 'start.html';", 300000);
+setTimeout("window.location.href = 'start.html';", 120000);
 
 const itemsDiv = $('.scheme-item');
 const rectSvg = $('.object');
