@@ -63,12 +63,12 @@ body {
 	height: inherit;
 }
 
-.back_img .back__bottom {
+.back__bottom {
 	bottom: 0;
 	right: 0;
 }
 
-.back_img .back__top {
+.back__top {
 	top: 0;
 	left: 0;
 }
